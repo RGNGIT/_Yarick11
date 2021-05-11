@@ -1,5 +1,5 @@
 ﻿
-namespace _Yarick11
+namespace _Dan9
 {
     partial class Form1
     {
@@ -41,12 +41,14 @@ namespace _Yarick11
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.listBox4 = new System.Windows.Forms.ListBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonStart
             // 
-            this.buttonStart.Location = new System.Drawing.Point(555, 413);
+            this.buttonStart.Location = new System.Drawing.Point(555, 552);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(520, 23);
             this.buttonStart.TabIndex = 0;
@@ -75,18 +77,18 @@ namespace _Yarick11
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(903, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 13);
+            this.label1.Size = new System.Drawing.Size(61, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Равномерный";
+            this.label1.Text = "mx=4, dx=4";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(727, 7);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 13);
+            this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Нормальный";
+            this.label2.Text = "mx=3, dx=3";
             // 
             // listBox3
             // 
@@ -101,18 +103,18 @@ namespace _Yarick11
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(552, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 13);
+            this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Конкатенированный";
+            this.label3.Text = "mx=2, dx=4";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 413);
+            this.label4.Location = new System.Drawing.Point(12, 552);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 13);
+            this.label4.Size = new System.Drawing.Size(59, 13);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Нажми на кнопку";
+            this.label4.Text = "Press start!";
             // 
             // chart1
             // 
@@ -130,11 +132,30 @@ namespace _Yarick11
             this.chart1.TabIndex = 8;
             this.chart1.Text = "chart1";
             // 
+            // listBox4
+            // 
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.Location = new System.Drawing.Point(15, 428);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(1060, 121);
+            this.listBox4.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 412);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(88, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Упорядоченный";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1087, 450);
+            this.ClientSize = new System.Drawing.Size(1087, 587);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.listBox4);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -163,6 +184,8 @@ namespace _Yarick11
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.ListBox listBox4;
+        private System.Windows.Forms.Label label5;
     }
 }
 

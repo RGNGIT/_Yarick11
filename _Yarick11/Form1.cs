@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using System.Collections.Generic;
 
-namespace _Yarick11
+namespace _Dan9
 {
     public partial class Form1 : Form
     {
@@ -11,20 +11,21 @@ namespace _Yarick11
             InitializeComponent();
         }
 
-        List<double> Normal = new List<double>();
-        List<double> Equal = new List<double>();
+        List<double> List1 = new List<double>();
+        List<double> List2 = new List<double>();
+        List<double> List3 = new List<double>();
         Random random = new Random();
 
-        double GetEqualValue() => (double)random.Next(0, 10);
         double GetNormalValue(int mx, int dx) => (double)(1 / Math.Sqrt(dx) * Math.Sqrt(2 * Math.PI)) * Math.Exp(-1 * (Math.Pow(random.Next(0, 50) - mx, 2)) / 2 * dx);
 
         List<double> ConcateList()
         {
             List<double> Temp = new List<double>();
-            for(int i = 0; i < 50; i++)
+            for(int i = 0; i < 30; i++)
             {
-                Temp.Add(Normal[i]);
-                Temp.Add(Equal[i]);
+                Temp.Add(List1[i]);
+                Temp.Add(List2[i]);
+                Temp.Add(List3[i]);
             }
             Temp.Sort();
             return Temp;
@@ -54,7 +55,7 @@ namespace _Yarick11
             {
                 if (i % 10 == 0)
                 {
-                    label4.Text += $"Столб.{i / 10 + 1}: {sum} ";
+                    label4.Text += $"С{i / 10 + 1}: ({sum}) ";
                     chart1.Series[0].Points.Add(sum);
                     sum = 0;
                 }
@@ -69,16 +70,18 @@ namespace _Yarick11
         private void buttonStart_Click(object sender, EventArgs e)
         {
             buttonStart.Visible = false;
-            for(int i = 0; i < 50; i++)
+            for(int i = 0; i < 30; i++)
             {
-                Equal.Add(GetEqualValue());
-                Normal.Add(GetNormalValue(5, 4));
-                listBox1.Items.Add(Equal[i]);
-                listBox2.Items.Add(Normal[i]);
+                List1.Add(GetNormalValue(2, 4));
+                List2.Add(GetNormalValue(3, 3));
+                List3.Add(GetNormalValue(4, 4));
+                listBox3.Items.Add(List1[i]);
+                listBox2.Items.Add(List2[i]);
+                listBox1.Items.Add(List3[i]);
             }
             foreach(double i in ConcateList())
             {
-                listBox3.Items.Add(i);
+                listBox4.Items.Add(i);
             }
             Calculate();
             ChartSet();
