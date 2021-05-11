@@ -51,6 +51,7 @@ namespace _Yarick11
             Dispersion /= ConcateList().Count - 1;
             label4.Text = $"Среднее значение: {Average / ConcateList().Count} Дисперсия: {Dispersion}";
         }
+
         private void ChartSet()
         {
             label4.Text += "\n";
